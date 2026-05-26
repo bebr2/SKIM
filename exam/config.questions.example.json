@@ -1,0 +1,20 @@
+{
+  "datasets": ["theoremqa", "logicbench"],
+  "corpus_path": "./prepare/output/corpus.json",
+  "question_generation": {
+    "prompt_file": "./exam/question_prompt.json",
+    "n_questions_per_skill": 5,
+    "max_retries": 3,
+    "max_tokens": 2048,
+    "temperature": 0.2,
+    "request_timeout_seconds": 300,
+    "qpm": 60
+  },
+  "output": {
+    "instances_dir": "./exam/output/instances",
+    "questions_json": "./exam/output/questions_generated.json",
+    "manifest_json": "./exam/output/questions_manifest.json",
+    "max_skills_per_dataset": 0,
+    "overwrite": false
+  }
+}

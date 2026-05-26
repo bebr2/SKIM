@@ -1,0 +1,45 @@
+{
+  "exam_name": "toolqa_react_exam",
+  "dataset": "toolqa",
+  "toolqa_data_dir": "./data/external/toolqa",
+  "corpus_path": "./prepare/output/corpus.json",
+  "checkpoint": "./checkpoints/skim_stage3",
+  "question_generation": {
+    "prompt_file": "./exam/question_prompt_toolqa.json",
+    "n_questions_per_skill": 5,
+    "max_retries": 3,
+    "max_tokens": 2048,
+    "temperature": 0.2,
+    "request_timeout_seconds": 300,
+    "qpm": 60
+  },
+  "inference": {
+    "toolqa_max_steps": 20,
+    "toolqa_step_tokens": 512,
+    "skill_mode": "compress",
+    "k": 64,
+    "max_length": 4096,
+    "max_new_tokens": 1024,
+    "do_sample": false,
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "do_naive": true,
+    "do_full_text": true,
+    "compress_k_list": [16, 32, 64]
+  },
+  "judging": {
+    "prompt_file": "./exam/judge_prompt.json",
+    "max_retries": 3,
+    "max_tokens": 1024,
+    "temperature": 0.0,
+    "request_timeout_seconds": 300,
+    "qpm": 60
+  },
+  "output": {
+    "dir": "./exam/output/toolqa",
+    "summary_json": "./exam/output/toolqa/toolqa_exam_summary.json",
+    "raw_json": "./exam/output/toolqa/toolqa_exam_raw.json",
+    "overwrite": false
+  },
+  "skillrag_root": ""
+}

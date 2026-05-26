@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+outputs/
+results/
+wandb/
+prepare/output/
+exam/output/
+checkpoints/
+external/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.jsonl.tmp

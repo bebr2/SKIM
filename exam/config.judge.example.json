@@ -1,0 +1,20 @@
+{
+  "datasets": ["theoremqa", "logicbench"],
+  "instances_dir": "./exam/output/instances",
+  "answers_root": "./exam/output/answers",
+  "reference_mode": "full_text",
+  "candidate_modes": ["naive", "compress_k16", "compress_k32", "compress_k64"],
+  "judging": {
+    "prompt_file": "./exam/judge_prompt.json",
+    "max_retries": 3,
+    "max_tokens": 1024,
+    "temperature": 0.0,
+    "request_timeout_seconds": 300,
+    "qpm": 60
+  },
+  "output": {
+    "summary_json": "./exam/output/judge_summary.json",
+    "raw_json": "./exam/output/judge_raw.json",
+    "overwrite": false
+  }
+}

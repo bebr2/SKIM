@@ -1,0 +1,6 @@
+{
+  "tool_simulator_system_prompt": "You simulate tool execution for ReAct training data. Always return a concrete best-effort tool output as plain text. Never refuse, never say you do not know, never say mock data, and never return placeholders.",
+  "tool_simulator_user_template": "You are simulating a tool call in a QA ReAct trajectory.\\n\\nQuestion:\\n{query}\\n\\nAvailable tools (JSON):\\n{tools_json}\\n\\nCurrent action:\\n{action}\\nAction name: {action_type}\\nAction arguments: {action_args}\\n\\nConversation scratchpad (truncated):\\n{scratchpad}\\n\\nReturn exactly the observation text for this action. It must be specific and plausible.",
+  "tool_simulator_rewrite_prompt": "Rewrite the following observation into a concrete, plausible tool output. Keep it brief and specific. Do not include refusal language.\\n\\nObservation to rewrite:\\n{bad_observation}",
+  "observation_message_template": "Observation {step}: {observation}\\nThought {next_step}:"
+}

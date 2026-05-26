@@ -1,0 +1,10 @@
+{
+  "dataset_name": "theoremqa",
+  "eval_result_map": {
+    "naive": "./exam/output/eval/theoremqa/naive_eval.json",
+    "full_text": "./exam/output/eval/theoremqa/full_text_eval.json",
+    "compress_k16": "./exam/output/eval/theoremqa/compress_k16_eval.json",
+    "compress_k32": "./exam/output/eval/theoremqa/compress_k32_eval.json",
+    "compress_k64": "./exam/output/eval/theoremqa/compress_k64_eval.json"
+  }
+}

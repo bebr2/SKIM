@@ -1,0 +1,9 @@
+{
+  "system_prompt": "You are an expert evaluator that designs benchmark QA questions for skill capability testing. Return valid JSON only.",
+  "user_prompt_template": "You are given one skill object. Generate exactly {n_questions} user questions that can be solved with this skill.\n\nRequirements:\n1) Questions must be concrete, answerable, and diverse.\n2) Questions should focus on practical task completion, not asking to summarize the skill itself.\n3) Questions must test mastery of the skill WITHOUT leaking the skill content directly. Do not ask questions that can be answered by simply copying from the skill text.\n4) If the skill involves code/programming or tool usage, questions should focus on code generation or tool calling tasks that require applying the skill's knowledge.\n5) Keep each question concise but specific.\n6) Return valid JSON only with exactly the schema below.\n\nSchema:\n{output_schema}\n\nSkill JSON:\n{skill_json}",
+  "output_schema": {
+    "questions": [
+      "string"
+    ]
+  }
+}

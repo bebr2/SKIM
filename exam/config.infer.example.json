@@ -1,0 +1,27 @@
+{
+  "datasets": ["theoremqa", "logicbench"],
+  "checkpoint": "./checkpoints/skim_stage3",
+  "runner_script": "./skill/run_skill_compiler_inference.py",
+  "python_executable": "",
+  "instances_dir": "./exam/output/instances",
+  "corpus_path": "./prepare/output/corpus.json",
+  "output_root": "./exam/output/answers",
+  "manifest_json": "./exam/output/answers_manifest.json",
+  "toolqa_data_dir": "",
+  "inference": {
+    "do_naive": true,
+    "do_full_text": true,
+    "compress_k_list": [16, 32, 64],
+    "max_length": 4096,
+    "max_new_tokens": 1024,
+    "do_sample": false,
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "fp16": false
+  },
+  "run_flags": {
+    "disable_parallel": false,
+    "resume": false,
+    "overwrite": true
+  }
+}

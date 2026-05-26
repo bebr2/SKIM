@@ -1,0 +1,6 @@
+{
+  "note": "Split configs for 3-step exam pipeline",
+  "step1_questions_config": "./exam/config.questions.example.json",
+  "step2_infer_config": "./exam/config.infer.example.json",
+  "step3_judge_config": "./exam/config.judge.example.json"
+}

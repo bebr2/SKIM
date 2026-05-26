@@ -1,0 +1,52 @@
+{
+  "random_seed": 42,
+  "decision": {
+    "min_quality_score": 1.0,
+    "split_single_if_lt": 2,
+    "split_single_if_gt": 6,
+    "split_single_probability_in_range": 0.5,
+    "react_keep_probability": 0.6,
+    "react_not_direct": false,
+    "direct_query_count": 5,
+    "react_max_steps": 8
+  },
+  "generation": {
+    "add_extra_prompt": "",
+    "need_system_prompt_for_direct": true,
+    "main_max_retries": 2,
+    "simulator_max_retries": 2,
+    "main_request_timeout_seconds": 600,
+    "simulator_request_timeout_seconds": 600,
+    "main_max_tokens": 4096,
+    "main_temperature": 0.2,
+    "simulator_max_tokens": 1024,
+    "simulator_temperature": 0.2,
+    "simulator_context_max_chars": 12000
+  },
+  "rate_limit": {
+    "main_qpm": 60,
+    "simulator_qpm": 40
+  },
+  "react_validation": {
+    "action_pattern": "^([A-Za-z_][A-Za-z0-9_]*)\\[(.*)\\]$",
+    "reject_phrases": [
+      "i don't know",
+      "cannot",
+      "can't",
+      "unable",
+      "unknown",
+      "mock",
+      "n/a"
+    ]
+  },
+  "main_model": {
+    "mode": "env",
+    "provider": "env",
+    "model": null
+  },
+  "simulator_model": {
+    "mode": "env",
+    "provider": "env",
+    "model": null
+  }
+}

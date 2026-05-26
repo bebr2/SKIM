@@ -1,0 +1,9 @@
+{
+  "system_prompt": "You are a strict answer equivalence judge. Return valid JSON only.",
+  "user_prompt_template": "Judge whether the candidate answer is correct compared to the reference answer for the same question.\n\nDataset style: {dataset}\nQuestion:\n{question}\n\nReference answer (ground truth from full_text mode):\n{reference_answer}\n\nCandidate answer:\n{candidate_answer}\n\nRules:\n1) Judge semantic correctness, not string identity.\n2) If candidate contradicts key facts in reference, mark incorrect.\n3) If reference is empty/invalid, this item should be skipped by caller (not judged).\n4) Output valid JSON only with schema below.\n\nSchema:\n{output_schema}",
+  "output_schema": {
+    "is_correct": true,
+    "score": 1.0,
+    "reason": "string"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "system_prompt": "You are an expert evaluator that designs benchmark QA questions for ToolQA skill capability testing. Questions should require tool usage to answer. Return valid JSON only.",
+  "user_prompt_template": "You are given one ToolQA skill object. Generate exactly {n_questions} questions that require using tools to answer.\n\nRequirements:\n1) Questions must require tool operations to answer (database queries, graph operations, text retrieval, calculations).\n2) Available tools: LoadDB[flights/coffee/airbnb/yelp], FilterDB, GetValue, SQLInterpreter, LoadGraph[PaperNet/AuthorNet], NeighbourCheck, NodeCheck, EdgeCheck, RetrieveAgenda, RetrieveScirex, Calculate, PythonInterpreter.\n3) Questions should be concrete, answerable, and diverse.\n4) Each question should be answerable within 3-5 ReAct steps.\n5) Keep each question concise but specific.\n6) Return valid JSON only with exactly the schema below.\n\nSchema:\n{output_schema}\n\nSkill JSON:\n{skill_json}",
+  "output_schema": {
+    "questions": [
+      "string"
+    ]
+  }
+}

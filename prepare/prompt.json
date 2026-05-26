@@ -1,0 +1,31 @@
+{
+  "system_prompt": "You are an expert evaluator for AI agent skills. Return only valid JSON. Do not output markdown. Follow the schema exactly.",
+  "user_prompt_template": "You are given one skill object in JSON. Evaluate this skill from the perspective of whether it provides useful additional constraints, operational guidance, or capabilities to a base LLM.\n\nTasks:\n0) Give quality_score from 0 to 5 (higher is better).\n1) Generate exactly {k} concrete user questions that this skill can solve. These questions should be the users' actual real-life problems, rather than merely asking about the content of the Skill.\n2) Estimate whether this skill can be split into independent sub-skills that each solve one problem without depending on other skills. Return split_skill_count (0 if not splittable).\n3) Identify tools involved in this skill. If no tools are needed, return an empty list. If tools are involved, return a list where each tool includes: name, description, input params (name + description), output params (name + description). Environment which returns information can be treated as tools too. The name of the tool is a function name that starts with a capital letter.\n4) Judge whether the problem-solving flow is better suited to ReAct (Thought-Action-Observation). Return a boolean and a short reason.\n\nOutput requirements:\n- Return valid JSON only.\n- Keep field names exactly as provided in the schema.\n- No additional top-level fields beyond the schema.\n\nSchema:\n{output_schema}\n\nSkill JSON:\n{skill_json}",
+  "output_schema": {
+    "quality_score": 0.0,
+    "solvable_problems": [
+      "string"
+    ],
+    "split_skill_count": 0,
+    "tool_specs": [
+      {
+        "name": "string",
+        "description": "string",
+        "input_params": [
+          {
+            "name": "string",
+            "description": "string"
+          }
+        ],
+        "output_params": [
+          {
+            "name": "string",
+            "description": "string"
+          }
+        ]
+      }
+    ],
+    "prefer_react": false,
+    "prefer_react_reason": "string"
+  }
+}
