@@ -5,3 +5,4 @@
 *.jsonl text eol=lf
 *.md text eol=lf
 *.example text eol=lf
+data/*.jsonl filter=lfs diff=lfs merge=lfs -text
